@@ -9,14 +9,17 @@ class MyHeader extends StatelessWidget {
       children: [
         Expanded(
           child: Container(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(15.0),
             child: const Text("Berita Terbaru", textAlign: TextAlign.center),
           ),
         ),
         Expanded(
           child: Container(
-            padding: const EdgeInsets.all(10.0),
-            child: const Text("Pertandingan Baru", textAlign: TextAlign.center,),
+            padding: const EdgeInsets.all(15.0),
+            child: const Text(
+              "Pertandingan Baru",
+              textAlign: TextAlign.center,
+            ),
           ),
         ),
       ],

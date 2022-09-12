@@ -5,13 +5,38 @@ class MyBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(child: Container(
-          padding: const EdgeInsets.all(0.0),
-          height: 100,
-          child: Image.network("https://bola.okezone.com/read/2022/09/07/261/2662335/psg-libas-juventus-2-1-lionel-messi-justru-ukir-catatan-kurang-sedap")))
-      ],
+    return Container(
+      decoration: BoxDecoration(border: Border.all(color: Colors.amber)),
+      padding: const EdgeInsets.all(0.0),
+      child: Column(
+        children: [
+          Container(
+            height: 200.0,
+            width: MediaQuery.of(context).size.width,
+            padding: const EdgeInsets.all(0.0),
+            child: Image.asset(
+              "assets/images/messi.jpeg",
+              fit: BoxFit.fill,
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(5.0),
+            child: const Text(
+              "Lionel Messi",
+              style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            color: Colors.amber,
+            width: MediaQuery.of(context).size.width,
+            child: const Text("Lorem Ipsum"),
+          )
+        ],
+      ),
     );
   }
 }
